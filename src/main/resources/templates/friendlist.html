@@ -6,8 +6,14 @@
 </head>
 <body>
     <h1>My friends</h1>
-    <ul th:each="friend : friends">
-        <li th:text="${friend.firstName} + ' ' + ${friend.lastName}"></li>
+    <ul th:each="friend : ${friends}">
+        <li th:text="${friend}"></li>
     </ul>
+    
+    <h1>Add new friend to list</h1>
+    <form action="#" th:action="@{/index}" method="get">
+        <p>Name: <input type="text" th:name="friend" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
 </body>
 </html>

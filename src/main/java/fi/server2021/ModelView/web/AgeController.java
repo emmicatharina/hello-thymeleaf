@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AgeController {
 	
 	@RequestMapping("/hello")
-	public String greetingAge(@RequestParam(name="name") String name, 
-			@RequestParam(name="age") int age, Model model) {
+	public String greetingAge(@RequestParam(name = "name") String name, 
+			@RequestParam(name = "age") int age, Model model) {
 		model.addAttribute("name", name);
 		model.addAttribute("age", age);
 		return "hello";

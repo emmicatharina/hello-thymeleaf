@@ -12,10 +12,9 @@ import fi.server2021.ModelView.domain.Student;
 @Controller
 public class StudentController {
 	
-	ArrayList<Student> students = new ArrayList<>();
-
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String studentList(Model model) {
+		ArrayList<Student> students = new ArrayList<>();
 		students.add(new Student("Kate", "Cole"));
 		students.add(new Student("Dan", "Brown"));
 		students.add(new Student("Mike", "Mars"));
